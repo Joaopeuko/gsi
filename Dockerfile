@@ -3,7 +3,6 @@ FROM python:3.10
 WORKDIR /gsi
 
 COPY gsi ./gsi
-COPY ./data ./data
 COPY config.yaml .
 COPY log_manager.py .
 COPY main.py .
