@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+nltk = "*"
+pyyaml = "*"
+fastapi = "*"
+pandas = "*"
+gunicorn = "*"
+uvicorn = "*"
+pytest = "*"
+coverage = "*"
+pytest-cov = "*"
+python-dotenv = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
+
+[scripts]
+server_local = "uvicorn main:app --reload"
+server_docker = "uvicorn main:app --host 0.0.0.0 --port 8000"
+unittests = "coverage run -m pytest --cache-clear --cov-report term-missing --cov=cs"
